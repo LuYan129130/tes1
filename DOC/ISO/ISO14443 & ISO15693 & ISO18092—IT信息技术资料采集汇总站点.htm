@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML>
+<head>
+<meta charset="utf-8" />
+<meta name="Keywords" content="ISO14443 &amp; ISO15693 &amp; ISO18092,,,IT技术,C,编程精华文章,程序搜集整理" /> 
+<meta name="Description" content="ISO14443 &amp; ISO15693 &amp; ISO18092,,,IT技术,C,编程精华文章,程序搜集整理" />
+<title>ISO14443 &amp; ISO15693 &amp; ISO18092—IT信息技术资料采集汇总站点</title>
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/css/detail.css" />
+</head>
+<body>
+<div id="banner">
+	<div id="logo">
+    	<a href="/index.html"><img src="/images/logo.jpg" alt="logo" /></a>
+    </div>
+    <div id="adv-banner">
+    	<script type="text/javascript">
+/*760*90，创建于2014-5-28*/
+var cpro_id = "u1570694";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+    </div>
+</div><div id="nav">
+	
+		<li><a href="/ITNews.html">业界动态</a>
+ 			</li>
+		<li><a href="/Mobile.html">移动开发</a>
+ 			</li>
+		<li><a href="/WebDep.html">Web后台</a>
+ 			</li>
+		<li><a href="/WebUI.html">Web前端</a>
+ 			</li>
+		<li><a href="/Unix.html">Linux/Unix</a>
+ 			</li>
+		<li><a href="/DataBase.html">数据库</a>
+ 			</li>
+		<li><a href="/Desktop.html">桌面开发</a>
+ 			</li>
+		<li><a href="/ICloud.html">云计算</a>
+ 			</li>
+		<li><a href="/ExpertBlog.html">专家博客</a>
+ 			</li>
+		<li><a href="/Other.html">其他</a>
+ 			</li>
+	</div>
+<div id="main">
+	<div id="main-left">
+    	<div id="article-header">
+        	<h3 class="title">
+            ISO14443 &amp; ISO15693 &amp; ISO18092
+            </h3>
+        </div>
+        <div class="article-detail">
+        	<p><strong><span class="goog_qs-tidbit goog_qs-tidbit-0">A.1 ISO14443</span></strong></p>
+<p><span class="goog_qs-tidbit goog_qs-tidbit-0">ISO14443 是一系列针对接近式（proximity ） RFID 的国际化、独立于厂商的标准。</span></p>
+<p>它工作于 13.56MHz，使用磁场耦合读卡器(PCD)和卡片 (PICC).</p>
+<p>ISO 14443-1&nbsp; 这部分描述了物理层<br />ISO 14443-2&nbsp; 这部分描述了链路层, 比如：位的时钟，信号波形以及通讯中用到的编码规则等。</p>
+<p>&nbsp;&nbsp;&nbsp; * Type A uses <span style="color: #ff0000;"><strong>100% ASK</strong></span> with modified <span style="color: #ff0000;"><strong>miller encoding</strong></span> in the PCD-&gt;PICC direction&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and <span style="color: #ff0000;"><strong>OOK</strong></span> on a 847.5kHz subcarrier in PICC-&gt;PCD direction.<br />&nbsp;&nbsp;&nbsp; * Type B uses <span style="color: #ff0000;"><strong>10% ASK</strong></span> with <span style="color: #ff0000;"><strong>NRZ encoding</strong></span> in the PCD-&gt;PICC direction and <span style="color: #ff0000;"><strong>BPSK</strong></span> on a&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 847.5kHz subcarrier in PICC-&gt;PCD direction.</p>
+<p>ISO 14443-3&nbsp; 这部分描述了数据帧和用以找寻场中的所有 PICC 的防冲突机制。<br />ISO 14443-4&nbsp; 这部分描述了可选的传输协议层。该协议通常被称为 "T=CL"，这是源于接触式卡的 T=0， T=1 协议。&ldquo;CL&rdquo;也就是非接触式之意。</p>
+<p><strong>A.2 其他相近</strong></p>
+<p><strong>Mifare Classic</strong></p>
+<p>This is a proprietary Philips protocol which runs on top of 14443-1,2,3 (Type A). It does not implement 14443-4. Since Mifare Classic includes some proprietary CRYPTO1 algorithm, you can only do Mifare if you have a Philips reader ASIC (such as the RC632).<br /><strong>Mifare Ultralight</strong></p>
+<p>This is a variation of Mifare Classic without crypto. It uses 14443-1,2,3 (Type A), but not 14443-4.</p>
+<p><strong>FeliCa</strong></p>
+<p>This is a proprietary protocol developed by <strong>Sony</strong>.</p>
+<p>Communication speed is<strong> 212k</strong>Bps.</p>
+<p>PCD-&gt;PICC communication uses <strong>manchester-coded 10% ASK</strong> on the 13.56MHz carrier. It doesn't use a subcarrier for the PICC-&gt;PCD direction. Anti-collision is based on a time slot algorithm.</p>
+<p>There was an attempt to specify FeliCa as "ISO 14443 Type C", but this did not end up in the final standard. However it has now been standardised under the <strong>NFC</strong> umbrella specification ISO 18092.</p>
+<p>&nbsp;</p>
+<p><strong>B.1 ISO15693</strong></p>
+<p>ISO15693 是一系列针对近距离（vicinity） RFID 的国际化、独立于厂商的标准。它工作于 13.56MHz，并使用磁场耦合读卡器(VCD)和卡片 (VICC).</p>
+<p><strong>读取距离可达 1-1.5 米</strong>非接触智能卡，使用的频率为13.56MHz，设计简单让生产读卡器的成本比 ISO14443 低，大都用来做出入控制、出勤考核等，现在很多企业使用的门禁卡大都使用这一类的标准。</p>
+<p>由于这类卡可以以<strong>较大距离工作</strong>，故所需的场强（1.15-5 A/m）小于接近式卡片 (1.5 to 7.5 A/m)。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>ISO 15693-1&nbsp; 这部分描述了物理层</strong></p>
+<p><strong>ISO 15693-2&nbsp; 这部分描述了射频的电源和信号界面</strong></p>
+<p><strong>ISO 15693-3&nbsp; 这部分描述了防冲突和传输协议</strong></p>
+<p>&nbsp;</p>
+<p><strong>C. ISO18092</strong></p>
+<p>和传说中的 NFC 有关系。转录介绍如下：</p>
+<p>　　大概在 2003 年左右，当时的 philips 半导体和 Sony 公司计划基于非接触式卡技术发展一种与之兼容的无线通讯技术。飞利浦派了一个团队到日本和sony工程师一起闭关三个月，然后联合对外发布关于一种兼容当前 ISO14443 非接触式卡协议的无线通讯技术，取名NFC(Near Field Communication)。</p>
+<p>　　该技术规范定义了两个 NFC 设备之间基于 13.56MHz 频率的无线通讯方式，在 NFC 的世界里没有读卡器，没有卡，只有 NFC 设备。该规范定义了 NFC 设备通讯的两种模式:主动模式和被动模式。并且分别定义了两种模式的选择和射频场防冲突方法、设备防冲突方法，定义了不同波特率通讯速率下的编码方式、调制解调方式等等最最底层的通讯方式和协议，说白了就是解决了如何交换数据流的问题。该规范最终被提交到ISO标准组织获得批准成为正式的国际标准，这就是 <span style="color: #ff0000;"><strong>ISO18092</strong></span>，后来增加了 <span style="color: #ff0000;"><strong>ISO15693</strong></span> 的兼容，形成新的 <strong>NFC 国际标准IP2</strong>，也就是<span style="color: #ff0000;"><strong> ISO21848</strong></span>。同时ECMA（欧洲计算机制造协会）也颁布了针对 NFC 的标准，分别是<span style="color: #ff0000;"> <strong>ECMA340和 ECMA352</strong></span>，对应的是ISO18092 和 ISO21848，其实两个标准内容大同小异，只是 ECMA 的是免费的，大家可以到网上下载到。</p>
+<p>　　为了加快推动NFC产业的发展，当时的飞利浦、SONY 和诺基压联合发起成立了 NFC 论坛，旨在推动行业应用的发展，定义相关基于NFC应用的中间层规范，包括一些<span style="color: #ff0000;"><strong>数据交换通讯协议NDEF</strong></span>，包括基于非接触式标签的几种　NFC tag　规范，主要涉及到卡片内部数据结构定义，NFC 设备（手机）如何识别一个标准的 NFC 论坛兼容的标签，如何解析具体应用数据等等相关规范，目的是为了让不同的　NFC设备之间可以互连互通。比如不同手机如何交换数据，如何识别同一个电子海报等等。&nbsp;<br />　　在实现 NFC 功能的具体技术方案上，大家都是基于两颗芯片，一个是NFC芯片，另外一个是智能卡芯片。但是在手机内部，NFC 芯片和智能卡芯片之间的接口上，不同厂商提出了不同的架构，飞利浦公司最早提出了 <strong>S2C(NFC-WI)</strong>接口，并且该接口最终通过 ECMA 成为正式标准。另外一家公司 GEMALTO，基于对运营商需求的了解，提出了 SWP 接口，并且和SIM卡结合起来。然后让一家法国公司 Inside开发了支持 SWP 的产品雏形。处于商业利益的考虑，最终SWP的架构获得运营商（GSMA）的一致支持，但是当初的SWP标准还很不成熟，还需要进一步完善。此时飞利浦最终放弃了自己重新提出来的另外一种单线标准，宣布支持 Gemalto 的 SWP 规范，并且和 GEMALTO 签署了战略合作协议，和 GEMALTO 一起进行 SWP 协议的改进，并提交给 ETSI，目前该标准离正式颁布应该不久。&nbsp;<br />　　SWP 也好、S2C 也好，和 NFC 规范是没有直接联系的，更没有冲突。NFC 规范定义的是 NFC 设备与外界的通讯规范，S2C/SWP 定义的是 NFC 内部实现的不同方式，是 NFC 芯片和智能卡芯片芯片之间的接口方式和通讯协议。NFC（ISO18902）和SWP， NFC 论坛和 ETSI 也是没有直接联系，更没有直接冲突，这些是组成完整的 NFC 系统和产业环境必不可少的几个部分。</p>
+<p><span>这里涉及到几个协议一起来看一下&nbsp;</span><br /><img src="http://dl.iteye.com/upload/attachment/471147/6238b29e-75de-303d-884b-10645008299c.png" alt="" /><span>&nbsp;</span><br /><br /><img src="http://dl.iteye.com/upload/attachment/471149/692eeef5-1959-3f8e-9544-e347b0b0c007.png" alt="" /><span>&nbsp;</span><br /><br /><img src="http://dl.iteye.com/upload/attachment/471153/7eabb9c7-ad8d-31c8-ba98-2fb57cf9af80.png" alt="" /><span>&nbsp;</span><br /><br /><img src="http://dl.iteye.com/upload/attachment/471155/8f0cac11-9e5f-37fd-a9ee-fae250f8a65a.png" alt="" /><span>&nbsp;</span><br /><br /><img src="http://dl.iteye.com/upload/attachment/471157/2c7c7703-cdb0-3dc6-bdf9-6cfca143f761.png" alt="" /><span>&nbsp;</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+        </div>
+    </div>
+    <div id="main-right">
+    	<div class="adv-wbanner">
+        <script type="text/javascript">
+/*250*250，创建于2014-5-28*/
+var cpro_id = "u1570716";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+        </div>
+        <div class="refnews-w">
+        	<dl>
+            	<dt>热点动态</dt>
+                                                <dd><a href="/ITNews/2014-06-17/224301.html"  target="_blank" title="维基百科最新规定：付费编辑者需公开身份">维基百科最新规定：付费编辑者需公开身份</a></dd>
+                                <dd><a href="/ITNews/2014-06-17/224300.html"  target="_blank" title="未来预测：Hadoop将无法独自处理大数据">未来预测：Hadoop将无法独自处理大数...</a></dd>
+                                <dd><a href="/ITNews/2014-06-17/224299.html"  target="_blank" title="Ngxtop：在命令行实时监控 Nginx 的神器">Ngxtop：在命令行实时监控Ngin...</a></dd>
+                                <dd><a href="/ITNews/2014-06-17/224298.html"  target="_blank" title="超负荷写代码 = 慢性自杀">超负荷写代码 = 慢性自杀</a></dd>
+                                <dd><a href="/ITNews/2014-06-12/8834.html"  target="_blank" title="Web开发的发展史">Web开发的发展史</a></dd>
+                                <dd><a href="/ITNews/2014-06-12/8833.html"  target="_blank" title="微软：买Lumia送USB充电器 30天无理由退货">微软：买Lumia送USB充电器30天...</a></dd>
+                                <dd><a href="/ITNews/2014-06-12/8832.html"  target="_blank" title="Linux Foundation数据说话：开源开发者很抢手">LinuxFoundation数据说话...</a></dd>
+                                <dd><a href="/ITNews/2014-06-12/8831.html"  target="_blank" title="Hack微信，不一样的安全视角">Hack微信，不一样的安全视角</a></dd>
+                            </dl>
+        </div>
+        <div class="adv-wbanner">
+        	<script type="text/javascript">
+/*250*250，创建于2014-5-28*/
+var cpro_id = "u1570716";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+        </div>
+        <div class="adv-wbanner">
+        	<script type="text/javascript">
+/*250*250，创建于2014-5-28*/
+var cpro_id = "u1570716";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+        </div>
+    </div>
+</div>
+<div id="footer">
+	Copyright:IT_OpenSource,蜀ICP备字第1200557-5号  <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5916134'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5916134%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</div></body>
+</html>
